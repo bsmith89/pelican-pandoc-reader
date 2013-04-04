@@ -25,3 +25,22 @@ If pandoc is not found on your path, you can specify it in the settings as well.
     PANDOC_PATH = '/path/to/pandoc'
 
 If the table of contents are requested with the `--toc` or `--table-of-contents` argument, it is parsed into the `toc` Pelican metadata field.
+
+
+Front matter
+============
+
+The pandoc reader expects YAML front matter in the following format:
+
+    ---
+    title:  A sample document
+    author: Me
+    date:   2013-04-01
+    ---
+    
+    The heading
+    ===========
+    
+    So, this is a document alright.
+    
+
