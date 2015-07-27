@@ -34,7 +34,7 @@ class PandocReader(BaseReader):
         with pelican_open(source_path) as source:
 
             # split source into front matter and document
-            match = re.match(r'\s*[-]{3}\n(.*)\n[-.]{3}\n', source, re.U|re.M|re.S)
+            match = re.match(r'\s*[-]{3}\n(.*?)\n[-.]{3}\n', source, re.U|re.M|re.S)
             if match:
                 frontmatter = yaml.load(match.group(1), Loader=yaml.BaseLoader)
                 document = source[len(match.group(0)) - 1:]
