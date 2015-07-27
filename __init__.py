@@ -1,4 +1,4 @@
-from readers import PandocReader
+from .readers import PandocReader
 from pelican import signals
 
 def initialize(pelican):
