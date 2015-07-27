@@ -32,7 +32,6 @@ class PandocReader(BaseReader):
 
         # read the source file
         with pelican_open(source_path) as source:
-            print(type(source))
 
             # split source into front matter and document
             match = re.match(r'\s*[-]{3}\n(.*)\n[-.]{3}\n', source, re.U|re.M|re.S)
