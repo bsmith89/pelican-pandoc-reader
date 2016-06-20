@@ -13,7 +13,7 @@ META_TEMPLATE = os.path.join(os.path.dirname(os.path.realpath(__file__)),
 
 class PandocReader(BaseReader):
     enabled = True
-    file_extensions = ['md']
+    file_extensions = []
     outfmt = 'html5'
     args = []
     filters = []
