@@ -31,6 +31,7 @@ class PandocReader(BaseReader):
         metadata = {}
         for name, value in raw_metadata.items():
             name = name.lower()
+            value = str(value)
             metadata[name] = self.process_metadata(name, value)
         return metadata
 
